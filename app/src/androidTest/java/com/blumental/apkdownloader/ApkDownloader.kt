@@ -40,7 +40,7 @@ class ApkDownloader {
     /* click INSTALL */
     device
         .wait(Until.findObject(By.text("INSTALL")), SHORT_TIMEOUT)
-        ?.click()
+        ?.click() ?: return
 
     /* grant permissions if necessary */
     device
